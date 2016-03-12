@@ -1,0 +1,179 @@
+swagger: '2.0'
+
+info:
+  version: "1.5.0"
+  title: Rules
+  description: |
+    A list of APIs to control call route from or to trunks and users.
+
+paths:
+  /rules:
+    get:
+      description: |
+        Gets `Rule` objects.
+      responses:
+        200:
+          description: Successful response
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Rule"
+    post:
+      description: |
+        Gets `Rule` objects.
+      parameters:
+        - $ref: "#/parameters/ruleName"
+        - $ref: "#/parameters/ruleStatus"
+        - $ref: "#/parameters/ruleApplications"
+        - $ref: "#/parameters/ruleConditions"
+      responses:
+        200:
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Rule'
+  /rules/{id}:
+    put:
+      description: |
+        Gets `Rule` objects.
+      parameters:
+        - $ref: "#/parameters/ruleId"
+        - $ref: "#/parameters/ruleName"
+        - $ref: "#/parameters/ruleStatus"
+        - $ref: "#/parameters/ruleApplications"
+        - $ref: "#/parameters/ruleConditions"
+      responses:
+        200:
+          description: Successful response
+          schema:
+            $ref: '#/definitions/Rule'
+    delete:
+      description: |
+        Gets `Rule` objects.
+      parameters:
+        - $ref: "#/parameters/ruleId"
+      responses:
+        200:
+          description: Successful response
+parameters:
+  ruleId:
+    name: id
+    in: path
+    description: Rule ID
+    required: true
+    type: string
+  ruleName:
+    name: name
+    in: formData
+    description: User defined name
+    required: true
+    type: string
+  ruleStatus:
+    name: status
+    in: formData
+    description: Status, whether this Rule is enabled or not.
+    required: true
+    type: string
+  ruleApplications:
+    name: applications
+    in: formData
+    description: Applications that should be evaluted when this Rule is matches by conditions
+    required: true
+    type: array
+    items:
+      type: string
+      # $ref: "#/definitions/RuleApplication"
+  ruleConditions:
+    name: conditions
+    in: formData
+    description: Conditions to check before evaluting applications
+    required: true
+    type: array
+    items:
+      type: string
+      # $ref: "#/definitions/RuleCondition"
+definitions:
+  Rule:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      name:
+        type: string
+      status:
+        type: string
+        enum:
+        - ENABLED
+        - DISABLED
+      applications:
+        type: string
+      priority:
+        type: integer
+        description: A priority number from 0 to 99. `Rules` with higher number will be executed at first.  
+      type:
+        type: string
+        enum: 
+        - INBOUND_CALL
+        - OUTBOUND_CAL
+        - INBOUND_SMS
+        - OUTBOUND_SMS
+      conditions:
+        type: array
+        items:
+          $ref: "#/definitions/RuleCondition"
+        description: A list of conditions that match that Rule
+  RuleApplication:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      data:
+        type: object
+      children:
+        type: array
+        items:
+          $ref: "#/definitions/RuleApplication"
+  RuleCondition:
+    type: object
+    properties:
+      type: 
+        type: string
+        enum: 
+        - USER
+        - GROUP
+        - GATEWAY
+        - CHANNEL
+        - TIME
+        - TEXT
+        - NUMBER
+      operation:
+        type: string
+        description: An operation string how to match specified type with value
+        enum: 
+        - EQUALS
+        - NOT_EQUALS
+        - STARTS
+        - ENDS
+        - MORE
+        - LESS
+        - BETWEEN
+        - BEYOND
+        - PATTERN_EQUALS
+        - PATTERN_NOT_EQUALS
+      segment:
+        type: string
+        description: A segment where apply that Condition
+        enum: 
+        - AND
+        - OR
+      value:
+        type: string
+        description: Text or Number that indicates value for provided type.
+      variable:
+        type: string
+        description: Variable ID, could be NULL if type is TIME
+      field:
+        type: string
+        description: A field of a provided variable
