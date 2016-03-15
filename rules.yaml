@@ -4,11 +4,29 @@ info:
   version: "1.5.0"
   title: Rules
   description: |
-    A list of APIs to control call route from or to trunks and users.
+    A list of APIs to control call route from or to gateways and users.
+
+host: local.carusto.com
+schemes:
+  - http
+  - https
+
+basePath: /api
+consumes:
+  - application/x-www-form-urlencoded
+produces:
+  - application/json
+  
+securityDefinitions:
+  basicAuth:
+    type: basic
+    description: HTTP Basic Authentication. Works over `HTTP` and `HTTPS`
 
 paths:
   /rules:
     get:
+      security:
+       - basicAuth: []
       description: |
         Gets `Rule` objects.
       responses:
@@ -19,11 +37,15 @@ paths:
             items:
               $ref: "#/definitions/Rule"
     post:
+      security:
+       - basicAuth: []
       description: |
         Gets `Rule` objects.
       parameters:
         - $ref: "#/parameters/ruleName"
         - $ref: "#/parameters/ruleStatus"
+        - $ref: "#/parameters/ruleType"
+        - $ref: "#/parameters/rulePriority"
         - $ref: "#/parameters/ruleApplications"
         - $ref: "#/parameters/ruleConditions"
       responses:
@@ -33,12 +55,15 @@ paths:
             $ref: '#/definitions/Rule'
   /rules/{id}:
     put:
+      security:
+       - basicAuth: []
       description: |
         Gets `Rule` objects.
       parameters:
         - $ref: "#/parameters/ruleId"
         - $ref: "#/parameters/ruleName"
         - $ref: "#/parameters/ruleStatus"
+        - $ref: "#/parameters/rulePriority"
         - $ref: "#/parameters/ruleApplications"
         - $ref: "#/parameters/ruleConditions"
       responses:
@@ -47,6 +72,8 @@ paths:
           schema:
             $ref: '#/definitions/Rule'
     delete:
+      security:
+       - basicAuth: []
       description: |
         Gets `Rule` objects.
       parameters:
@@ -67,20 +94,44 @@ parameters:
     description: User defined name
     required: true
     type: string
+    default: Custom name
   ruleStatus:
     name: status
     in: formData
     description: Status, whether this Rule is enabled or not.
     required: true
     type: string
+    enum:
+      - ENABLED
+      - DISABLED
+  rulePriority:
+    name: priority
+    in: formData
+    description: A number from 0 to 99. `Rules` with higher number will be executed at first.
+    required: true
+    type: integer
+    default: 10
+  ruleType:
+    name: type
+    in: formData
+    description: Type for Rule where it could be applied
+    required: true
+    type: string
+    enum: 
+      - CALL_FROM_GATEWAY
+      - CALL_TO_GATEWAY
+      - CALL_FROM_USER
+      - CALL_TO_USER
   ruleApplications:
     name: applications
     in: formData
     description: Applications that should be evaluted when this Rule is matches by conditions
     required: true
     type: array
+    collectionFormat: multi
     items:
       type: string
+      default: "{\"id\":\"1234567890\",\"name\":\"TEST\",\"data\":{},\"children\":[]}"
       # $ref: "#/definitions/RuleApplication"
   ruleConditions:
     name: conditions
@@ -88,8 +139,10 @@ parameters:
     description: Conditions to check before evaluting applications
     required: true
     type: array
+    collectionFormat: multi
     items:
       type: string
+      default: '{"variable": "XXX", "type":"USER","operation":"EQUALS","segment":"OR","value":988077, "field": null}'
       # $ref: "#/definitions/RuleCondition"
 definitions:
   Rule:
@@ -109,14 +162,14 @@ definitions:
         type: string
       priority:
         type: integer
-        description: A priority number from 0 to 99. `Rules` with higher number will be executed at first.  
+        description: A number from 0 to 99. `Rules` with higher number will be executed at first.  
       type:
         type: string
         enum: 
-        - INBOUND_CALL
-        - OUTBOUND_CAL
-        - INBOUND_SMS
-        - OUTBOUND_SMS
+        - CALL_FROM_GATEWAY
+        - CALL_TO_GATEWAY
+        - CALL_FROM_USER
+        - CALL_TO_USER
       conditions:
         type: array
         items:
