@@ -1,0 +1,8 @@
+{
+  "groupId":"com.carusto.testkit.swagger",
+  "artifactId":"CarustoApi",
+  "artifactVersion":"1.2.0",
+  "library":"okhttp-gson",
+  "modelPackage": "com.carusto.testkit.models",
+  "apiPackage": "com.carusto.testkit.api"
+}
