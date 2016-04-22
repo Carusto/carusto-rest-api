@@ -1,0 +1,29 @@
+put:
+  tags:
+   - snippets
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Snippet` objects.
+  parameters:
+    - $ref: "#/parameters/snippetId"
+    - $ref: "#/parameters/snippetName"
+    - $ref: "#/parameters/snippetApplications"
+    - $ref: "#/parameters/snippetArguments"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Snippet'
+delete:
+  tags:
+   - snippets
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Snippet` objects.
+  parameters:
+    - $ref: "#/parameters/snippetId"
+  responses:
+    200:
+      description: Successful response

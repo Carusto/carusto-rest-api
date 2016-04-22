@@ -1,0 +1,30 @@
+get:
+  tags:
+   - snippets
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Snippet` objects.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Snippet"
+post:
+  tags:
+   - snippets
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Snippet` objects.
+  parameters:
+    - $ref: "#/parameters/snippetName"
+    - $ref: "#/parameters/snippetApplications"
+    - $ref: "#/parameters/snippetArguments"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Snippet'

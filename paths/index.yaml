@@ -3,3 +3,9 @@
 
 /rules/{id}:
   $ref: ./rulesChange.yaml
+
+/snippets:
+  $ref: ./snippets.yaml
+
+/snippets/{id}:
+  $ref: ./snippetsChange.yaml

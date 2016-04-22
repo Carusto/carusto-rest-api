@@ -51,9 +51,8 @@ ruleApplications:
   type: array
   collectionFormat: multi
   items:
-    type: string
-    default: "{\"id\":\"1234567890\",\"name\":\"TEST\",\"data\":{},\"children\":[]}"
-    # $ref: "#/definitions/RuleApplication"
+    type: object
+    $ref: "#/definitions/RuleApplication"
 ruleConditions:
   name: conditions
   in: formData
@@ -62,9 +61,8 @@ ruleConditions:
   type: array
   collectionFormat: multi
   items:
-    type: string
-    default: '{"variable": "XXX", "type":"USER","operation":"EQUALS","segment":"OR","value":988077, "field": null}'
-    # $ref: "#/definitions/RuleCondition"
+    type: object
+    $ref: "#/definitions/RuleCondition"
 
 ########################################
 # Snippets parameters
@@ -91,8 +89,9 @@ snippetApplications:
   type: array
   collectionFormat: multi
   items:
-    type: string
-    default: '{"id":"1234567890","name":"TEST","data":{},"children":[]}'
+    type: object
+    $ref: "#/definitions/SnippetApplication"
+
 snippetArguments:
   name: arguments
   in: formData
@@ -101,6 +100,5 @@ snippetArguments:
   type: array
   collectionFormat: multi
   items:
-    type: string
-    default: '{"id":"1234567890","name":"TEST","type":"USER"}'
-    # $ref: "#/definitions/RuleCondition"
+    type: object
+    $ref: "#/definitions/SnippetArgument"

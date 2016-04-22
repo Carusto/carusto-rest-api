@@ -1,4 +1,6 @@
 get:
+  tags:
+   - rules
   security:
    - basicAuth: []
   description: |
@@ -11,6 +13,8 @@ get:
         items:
           $ref: "#/definitions/Rule"
 post:
+  tags:
+   - rules
   security:
    - basicAuth: []
   description: |

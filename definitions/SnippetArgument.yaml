@@ -1,0 +1,16 @@
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  type:
+    type: string
+    enum:
+    - USER
+    - GROUP
+    - GATEWAY
+    - CHANNEL
+    - TIME
+    - TEXT
+    - NUMBER

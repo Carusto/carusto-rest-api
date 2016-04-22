@@ -16,12 +16,16 @@ properties:
     enum:
     - EQUALS
     - NOT_EQUALS
+    - CONTAINS
+    - NOT_CONTAINS
     - STARTS
     - ENDS
     - MORE
     - LESS
     - BETWEEN
-    - BEYOND
+    - NOT_BETWEEN
+    - IS_EMPTY
+    - IS_NOT_EMPTY
     - PATTERN_EQUALS
     - PATTERN_NOT_EQUALS
   segment:
@@ -31,8 +35,8 @@ properties:
     - AND
     - OR
   value:
-    type: string
-    description: Text or Number that indicates value for provided type.
+    type: object
+    description: Any valid dat that indicates value for provided type.
   variable:
     type: string
     description: Variable ID, could be NULL if type is TIME

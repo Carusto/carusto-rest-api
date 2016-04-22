@@ -1,4 +1,6 @@
 put:
+  tags:
+   - rules
   security:
    - basicAuth: []
   description: |
@@ -16,6 +18,8 @@ put:
       schema:
         $ref: '#/definitions/Rule'
 delete:
+  tags:
+   - rules
   security:
    - basicAuth: []
   description: |

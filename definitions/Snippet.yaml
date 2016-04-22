@@ -1,0 +1,15 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  name:
+    type: string
+  applications:
+    type: string
+    items:
+      $ref: "#/definitions/SnippetApplication"
+  arguments:
+    type: array
+    items:
+      $ref: "#/definitions/SnippetArgument"

@@ -6,3 +6,12 @@ RuleApplication:
 
 RuleCondition:
   $ref: ./RuleCondition.yaml
+
+Snippet:
+  $ref: ./Snippet.yaml
+
+SnippetApplication:
+  $ref: ./SnippetApplication.yaml
+
+SnippetArgument:
+  $ref: ./SnippetArgument.yaml

@@ -11,7 +11,9 @@ properties:
     - ENABLED
     - DISABLED
   applications:
-    type: string
+    type: array
+    items:
+      $ref: "#/definitions/RuleApplication"
   priority:
     type: integer
     description: A number from 0 to 99. `Rules` with higher number will be executed at first.
