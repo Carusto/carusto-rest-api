@@ -1,0 +1,29 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int64
+  name:
+    type: string
+  status:
+    type: string
+    enum:
+    - ENABLED
+    - DISABLED
+  applications:
+    type: string
+  priority:
+    type: integer
+    description: A number from 0 to 99. `Rules` with higher number will be executed at first.
+  type:
+    type: string
+    enum:
+    - CALL_FROM_GATEWAY
+    - CALL_TO_GATEWAY
+    - CALL_FROM_USER
+    - CALL_TO_USER
+  conditions:
+    type: array
+    items:
+      $ref: "#/definitions/RuleCondition"
+    description: A list of conditions that match that Rule

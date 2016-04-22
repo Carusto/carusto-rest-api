@@ -73,40 +73,7 @@ paths:
         200:
           description: Successful response
 parameters:
-  snippetId:
-    name: id
-    in: path
-    description: Snippet ID
-    required: true
-    type: string
-  snippetName:
-    name: name
-    in: formData
-    description: User defined name
-    required: true
-    type: string
-    default: Custom name
-  snippetApplications:
-    name: applications
-    in: formData
-    description: Applications that should be evaluted when this Snippet is included
-    required: true
-    type: array
-    collectionFormat: multi
-    items:
-      type: string
-      default: '{"id":"1234567890","name":"TEST","data":{},"children":[]}'
-  snippetArguments:
-    name: arguments
-    in: formData
-    description: Arguments that should be provided when incliding this Snippet
-    required: true
-    type: array
-    collectionFormat: multi
-    items:
-      type: string
-      default: '{"id":"1234567890","name":"TEST","type":"USER"}'
-      # $ref: "#/definitions/RuleCondition"
+
 definitions:
   Snippet:
     type: object

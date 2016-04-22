@@ -1,0 +1,27 @@
+put:
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Rule` objects.
+  parameters:
+    - $ref: "#/parameters/ruleId"
+    - $ref: "#/parameters/ruleName"
+    - $ref: "#/parameters/ruleStatus"
+    - $ref: "#/parameters/rulePriority"
+    - $ref: "#/parameters/ruleApplications"
+    - $ref: "#/parameters/ruleConditions"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Rule'
+delete:
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Rule` objects.
+  parameters:
+    - $ref: "#/parameters/ruleId"
+  responses:
+    200:
+      description: Successful response

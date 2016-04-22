@@ -1,0 +1,29 @@
+get:
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Rule` objects.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Rule"
+post:
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Rule` objects.
+  parameters:
+    - $ref: "#/parameters/ruleName"
+    - $ref: "#/parameters/ruleStatus"
+    - $ref: "#/parameters/ruleType"
+    - $ref: "#/parameters/rulePriority"
+    - $ref: "#/parameters/ruleApplications"
+    - $ref: "#/parameters/ruleConditions"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Rule'

@@ -1,0 +1,5 @@
+/rules:
+  $ref: ./rules.yaml
+
+/rules/{id}:
+  $ref: ./rulesChange.yaml

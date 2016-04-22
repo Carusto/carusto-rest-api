@@ -1,0 +1,106 @@
+
+########################################
+# Rules parameters
+########################################
+
+ruleId:
+  name: id
+  in: path
+  description: Rule ID
+  required: true
+  type: string
+ruleName:
+  name: name
+  in: formData
+  description: User defined name
+  required: true
+  type: string
+  default: Custom name
+ruleStatus:
+  name: status
+  in: formData
+  description: Status, whether this Rule is enabled or not.
+  required: true
+  type: string
+  enum:
+    - ENABLED
+    - DISABLED
+rulePriority:
+  name: priority
+  in: formData
+  description: A number from 0 to 99. `Rules` with higher number will be executed at first.
+  required: true
+  type: integer
+  default: 10
+ruleType:
+  name: type
+  in: formData
+  description: Type for Rule where it could be applied
+  required: true
+  type: string
+  enum:
+    - CALL_FROM_GATEWAY
+    - CALL_TO_GATEWAY
+    - CALL_FROM_USER
+    - CALL_TO_USER
+ruleApplications:
+  name: applications
+  in: formData
+  description: Applications that should be evaluted when this Rule is matches by conditions
+  required: true
+  type: array
+  collectionFormat: multi
+  items:
+    type: string
+    default: "{\"id\":\"1234567890\",\"name\":\"TEST\",\"data\":{},\"children\":[]}"
+    # $ref: "#/definitions/RuleApplication"
+ruleConditions:
+  name: conditions
+  in: formData
+  description: Conditions to check before evaluting applications
+  required: true
+  type: array
+  collectionFormat: multi
+  items:
+    type: string
+    default: '{"variable": "XXX", "type":"USER","operation":"EQUALS","segment":"OR","value":988077, "field": null}'
+    # $ref: "#/definitions/RuleCondition"
+
+########################################
+# Snippets parameters
+########################################
+
+snippetId:
+  name: id
+  in: path
+  description: Snippet ID
+  required: true
+  type: string
+snippetName:
+  name: name
+  in: formData
+  description: User defined name
+  required: true
+  type: string
+  default: Custom name
+snippetApplications:
+  name: applications
+  in: formData
+  description: Applications that should be evaluted when this Snippet is included
+  required: true
+  type: array
+  collectionFormat: multi
+  items:
+    type: string
+    default: '{"id":"1234567890","name":"TEST","data":{},"children":[]}'
+snippetArguments:
+  name: arguments
+  in: formData
+  description: Arguments that should be provided when incliding this Snippet
+  required: true
+  type: array
+  collectionFormat: multi
+  items:
+    type: string
+    default: '{"id":"1234567890","name":"TEST","type":"USER"}'
+    # $ref: "#/definitions/RuleCondition"

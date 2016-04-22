@@ -1,0 +1,8 @@
+Rule:
+  $ref: ./Rule.yaml
+
+RuleApplication:
+  $ref: ./RuleApplication.yaml
+
+RuleCondition:
+  $ref: ./RuleCondition.yaml
