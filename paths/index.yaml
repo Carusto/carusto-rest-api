@@ -1,3 +1,9 @@
+/companies:
+  $ref: ./companies.yaml
+
+/companies/{id}:
+  $ref: ./companiesChange.yaml
+
 /rules:
   $ref: ./rules.yaml
 

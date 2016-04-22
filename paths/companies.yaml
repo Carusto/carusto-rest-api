@@ -1,0 +1,30 @@
+get:
+  tags:
+   - companies
+  security:
+   - basicAuth: []
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Company"
+post:
+  tags:
+   - companies
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/password"
+    - $ref: "#/parameters/companyRealm"
+    - $ref: "#/parameters/companyName"
+    - $ref: "#/parameters/companyVoip"
+    - $ref: "#/parameters/companyWeb"
+    - $ref: "#/parameters/companyAppAs"
+    - $ref: "#/parameters/companyAppCc"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Company'

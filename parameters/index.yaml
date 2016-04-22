@@ -1,5 +1,75 @@
 
 ########################################
+# Common parameters
+########################################
+
+password:
+  name: password
+  in: formData
+  description: Authentication password
+  required: true
+  type: string
+
+########################################
+# Companies parameters
+########################################
+
+companyId:
+  name: id
+  in: path
+  description: Company ID
+  required: true
+  type: string
+
+companyRealm:
+  name: realm
+  in: formData
+  description: Company realm (case-insensitive) is required for all authentication schemes which issue a challenge.
+  required: true
+  type: string
+  default: pbx.example.com
+
+companyName:
+  name: name
+  in: formData
+  description: Company name
+  required: true
+  type: string
+  default: Example LP
+
+companyVoip:
+  name: voip
+  in: formData
+  description: Quantity of VoIP service licenses for company
+  required: true
+  type: integer
+  default: 10
+
+companyWeb:
+  name: web
+  in: formData
+  description: Quantity of UC service licenses for company
+  required: true
+  type: integer
+  default: 10
+
+companyAppAs:
+  name: appas
+  in: formData
+  description: True to enable Analytics application for company
+  required: true
+  type: boolean
+  default: true
+
+companyAppCc:
+  name: appcc
+  in: formData
+  description: True to enable Call center application for company
+  required: true
+  type: boolean
+  default: true
+
+########################################
 # Rules parameters
 ########################################
 
