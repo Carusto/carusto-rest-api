@@ -17,14 +17,3 @@ put:
       description: Successful response
       schema:
         $ref: '#/definitions/Company'
-delete:
-  tags:
-   - companies
-  security:
-   - basicAuth: []
-  parameters:
-    - $ref: "#/parameters/password"
-    - $ref: "#/parameters/companyId"
-  responses:
-    200:
-      description: Successful response

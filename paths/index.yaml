@@ -4,6 +4,9 @@
 /companies/{id}:
   $ref: ./companiesChange.yaml
 
+/companies/delete/{id}:
+  $ref: ./companiesDelete.yaml
+
 /rules:
   $ref: ./rules.yaml
 

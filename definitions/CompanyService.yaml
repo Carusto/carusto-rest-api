@@ -11,5 +11,5 @@ properties:
      - APPCC
   quantity:
     type: integer
-    format: int64
+    format: int32
     description: A quantity of usages for service

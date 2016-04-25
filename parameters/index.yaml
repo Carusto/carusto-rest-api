@@ -19,7 +19,8 @@ companyId:
   in: path
   description: Company ID
   required: true
-  type: string
+  type: integer
+  format: int32
 
 companyRealm:
   name: realm

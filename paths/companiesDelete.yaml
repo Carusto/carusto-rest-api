@@ -1,0 +1,13 @@
+post:
+  tags:
+   - companies
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/password"
+    - $ref: "#/parameters/companyId"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: boolean
