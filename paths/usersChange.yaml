@@ -1,0 +1,30 @@
+put:
+  tags:
+   - users
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/userId"
+    - $ref: "#/parameters/userGroupId"
+    - $ref: "#/parameters/userName"
+    - $ref: "#/parameters/userExtension"
+    - $ref: "#/parameters/userMail"
+    - $ref: "#/parameters/userLanguage"
+    - $ref: "#/parameters/userMobile"
+    - $ref: "#/parameters/userPreferencesCliNumber"
+    - $ref: "#/parameters/userPreferencesRecordTemplate"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/User'
+delete:
+  tags:
+   - users
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/userId"
+  responses:
+    200:
+      description: Successful response

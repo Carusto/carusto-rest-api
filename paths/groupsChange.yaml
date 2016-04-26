@@ -1,0 +1,24 @@
+put:
+  tags:
+   - groups
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/groupId"
+    - $ref: "#/parameters/groupName"
+    - $ref: "#/parameters/groupDescription"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Group'
+delete:
+  tags:
+   - groups
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/groupId"
+  responses:
+    200:
+      description: Successful response

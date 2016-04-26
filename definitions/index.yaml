@@ -21,3 +21,18 @@ Company:
 
 CompanyService:
   $ref: ./CompanyService.yaml
+
+Group:
+  $ref: ./Group.yaml
+
+GroupSettings:
+  $ref: ./GroupSettings.yaml
+
+User:
+  $ref: ./User.yaml
+
+UserPreferences:
+  $ref: ./UserPreferences.yaml
+
+UserRegistration:
+  $ref: ./UserRegistration.yaml

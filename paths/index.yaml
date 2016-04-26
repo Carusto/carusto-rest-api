@@ -18,3 +18,15 @@
 
 /snippets/{id}:
   $ref: ./snippetsChange.yaml
+
+/users:
+  $ref: ./users.yaml
+
+/users/{id}:
+  $ref: ./usersChange.yaml
+
+/groups:
+  $ref: ./groups.yaml
+
+/groups/{id}:
+  $ref: ./groupsChange.yaml

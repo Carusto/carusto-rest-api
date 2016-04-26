@@ -70,6 +70,114 @@ companyAppCc:
   type: boolean
   default: true
 
+
+########################################
+# Users parameters
+########################################
+
+userId:
+  name: id
+  in: path
+  description: User ID
+  required: true
+  type: integer
+  format: int32
+
+userGroupId:
+  name: gid
+  in: formData
+  description: Group ID
+  required: true
+  type: integer
+  format: int32
+
+userName:
+  name: name
+  in: formData
+  required: true
+  type: string
+  default: John Doe
+
+userPassword:
+  name: password
+  in: formData
+  required: true
+  type: string
+
+userSipPassword:
+  name: sipPassword
+  in: formData
+  required: true
+  type: string
+
+userExtension:
+  name: extension
+  in: formData
+  required: true
+  type: string
+  default: 100
+
+userMail:
+  name: mail
+  in: formData
+  required: true
+  type: string
+  default: john.doe@example.com
+
+userLanguage:
+  name: language
+  in: formData
+  required: true
+  type: string
+  default: en
+
+userMobile:
+  name: mobile
+  in: formData
+  type: array
+  items:
+    type: string
+
+userPreferencesCliNumber:
+  name: setting[cliNumber]
+  in: formData
+  type: string
+
+userPreferencesRecordTemplate:
+  name: setting[recordTemplate]
+  in: formData
+  type: string
+  enum:
+  - ENABLED
+  - DISABLED
+  default: ENABLED
+
+
+########################################
+# Groups parameters
+########################################
+
+groupId:
+  name: id
+  in: path
+  description: Group ID
+  required: true
+  type: integer
+  format: int32
+
+groupName:
+  name: name
+  in: formData
+  required: true
+  type: string
+  default: Example
+
+groupDescription:
+  name: description
+  in: formData
+  type: string
+
+
 ########################################
 # Rules parameters
 ########################################

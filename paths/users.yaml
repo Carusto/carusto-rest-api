@@ -1,0 +1,33 @@
+get:
+  tags:
+   - users
+  security:
+   - basicAuth: []
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/User"
+post:
+  tags:
+   - users
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/userGroupId"
+    - $ref: "#/parameters/userName"
+    - $ref: "#/parameters/userPassword"
+    - $ref: "#/parameters/userSipPassword"
+    - $ref: "#/parameters/userExtension"
+    - $ref: "#/parameters/userMail"
+    - $ref: "#/parameters/userLanguage"
+    - $ref: "#/parameters/userMobile"
+    - $ref: "#/parameters/userPreferencesCliNumber"
+    - $ref: "#/parameters/userPreferencesRecordTemplate"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/User'

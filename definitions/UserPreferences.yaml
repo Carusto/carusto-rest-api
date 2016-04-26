@@ -1,0 +1,31 @@
+type: object
+properties:
+  features:
+    type: object
+    properties:
+      voicemail:
+        type: boolean
+      mobility:
+        type: boolean
+      mobilityTimeout:
+        type: integer
+        format: int32
+      dialTimeout:
+        type: integer
+        format: int32
+      callNotify:
+        type: boolean
+      msgNotify:
+        type: boolean
+      msgNotify:
+        type: boolean
+  advanced:
+    type: object
+    properties:
+      recordTemplate:
+        type: string
+        enum:
+        - ENABLED
+        - DISABLED
+      cliNumber:
+        type: string
