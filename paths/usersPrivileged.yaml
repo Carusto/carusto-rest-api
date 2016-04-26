@@ -1,0 +1,12 @@
+get:
+  tags:
+   - users
+  security:
+   - basicAuth: []
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/UserWithPassword"

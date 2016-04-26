@@ -31,6 +31,9 @@ GroupSettings:
 User:
   $ref: ./User.yaml
 
+UserWithPassword:
+  $ref: ./UserWithPassword.yaml
+
 UserPreferences:
   $ref: ./UserPreferences.yaml
 

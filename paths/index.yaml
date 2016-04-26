@@ -22,6 +22,9 @@
 /users:
   $ref: ./users.yaml
 
+/users/with-passwords:
+  $ref: ./usersPrivileged.yaml
+
 /users/{id}:
   $ref: ./usersChange.yaml
 
