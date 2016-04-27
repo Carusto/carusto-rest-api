@@ -9,4 +9,4 @@ properties:
   children:
     type: array
     items:
-      $ref: "#/definitions/RuleApplication"
+      $ref: "#/definitions/RouteApplication"

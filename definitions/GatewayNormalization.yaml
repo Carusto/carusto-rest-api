@@ -1,0 +1,10 @@
+type: object
+properties:
+  inbound:
+    type: array
+    items:
+      $ref: "#/definitions/GatewayNormalizationRule"
+  outbound:
+    type: array
+    items:
+      $ref: "#/definitions/GatewayNormalizationRule"

@@ -7,11 +7,11 @@
 /companies/delete/{id}:
   $ref: ./companiesDelete.yaml
 
-/rules:
-  $ref: ./rules.yaml
+/routes:
+  $ref: ./routes.yaml
 
-/rules/{id}:
-  $ref: ./rulesChange.yaml
+/routes/{id}:
+  $ref: ./routesChange.yaml
 
 /snippets:
   $ref: ./snippets.yaml
@@ -33,3 +33,9 @@
 
 /groups/{id}:
   $ref: ./groupsChange.yaml
+
+/gateways:
+  $ref: ./gateways.yaml
+
+/gateways/{id}:
+  $ref: ./gatewaysChange.yaml

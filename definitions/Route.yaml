@@ -13,10 +13,10 @@ properties:
   applications:
     type: array
     items:
-      $ref: "#/definitions/RuleApplication"
+      $ref: "#/definitions/RouteApplication"
   priority:
     type: integer
-    description: A number from 0 to 99. `Rules` with higher number will be executed at first.
+    description: A number from 0 to 99. `Routes` with higher number will be executed at first.
   type:
     type: string
     enum:
@@ -27,5 +27,5 @@ properties:
   conditions:
     type: array
     items:
-      $ref: "#/definitions/RuleCondition"
-    description: A list of conditions that match that Rule
+      $ref: "#/definitions/RouteCondition"
+    description: A list of conditions that match that Route

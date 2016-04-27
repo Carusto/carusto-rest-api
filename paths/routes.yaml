@@ -1,0 +1,33 @@
+get:
+  tags:
+   - routes
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Route` objects.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Route"
+post:
+  tags:
+   - routes
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Route` objects.
+  parameters:
+    - $ref: "#/parameters/routeName"
+    - $ref: "#/parameters/routeStatus"
+    - $ref: "#/parameters/routeType"
+    - $ref: "#/parameters/routePriority"
+    - $ref: "#/parameters/routeApplications"
+    - $ref: "#/parameters/routeConditions"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Route'

@@ -1,0 +1,28 @@
+get:
+  tags:
+   - gateways
+  security:
+   - basicAuth: []
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Gateway"
+post:
+  tags:
+   - gateways
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/gatewayName"
+    - $ref: "#/parameters/gatewayType"
+    - $ref: "#/parameters/gatewayLogin"
+    - $ref: "#/parameters/gatewayPassword"
+    - $ref: "#/parameters/gatewayHost"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Gateway'

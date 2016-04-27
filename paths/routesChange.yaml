@@ -1,0 +1,31 @@
+put:
+  tags:
+   - routes
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Route` objects.
+  parameters:
+    - $ref: "#/parameters/routeId"
+    - $ref: "#/parameters/routeName"
+    - $ref: "#/parameters/routeStatus"
+    - $ref: "#/parameters/routePriority"
+    - $ref: "#/parameters/routeApplications"
+    - $ref: "#/parameters/routeConditions"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Route'
+delete:
+  tags:
+   - routes
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Route` objects.
+  parameters:
+    - $ref: "#/parameters/routeId"
+  responses:
+    200:
+      description: Successful response

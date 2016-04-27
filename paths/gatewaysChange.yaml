@@ -1,0 +1,27 @@
+put:
+  tags:
+   - gateways
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/gatewayId"
+    - $ref: "#/parameters/gatewayName"
+    - $ref: "#/parameters/gatewayType"
+    - $ref: "#/parameters/gatewayLogin"
+    - $ref: "#/parameters/gatewayPassword"
+    - $ref: "#/parameters/gatewayHost"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Gateway'
+delete:
+  tags:
+   - gateways
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/groupId"
+  responses:
+    200:
+      description: Successful response

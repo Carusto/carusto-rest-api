@@ -1,11 +1,11 @@
-Rule:
-  $ref: ./Rule.yaml
+Route:
+  $ref: ./Route.yaml
 
-RuleApplication:
-  $ref: ./RuleApplication.yaml
+RouteApplication:
+  $ref: ./RouteApplication.yaml
 
-RuleCondition:
-  $ref: ./RuleCondition.yaml
+RouteCondition:
+  $ref: ./RouteCondition.yaml
 
 Snippet:
   $ref: ./Snippet.yaml
@@ -39,3 +39,18 @@ UserPreferences:
 
 UserRegistration:
   $ref: ./UserRegistration.yaml
+
+Gateway:
+  $ref: ./Gateway.yaml
+
+GatewayNormalization:
+  $ref: ./GatewayNormalization.yaml
+
+GatewayNormalizationRule:
+  $ref: ./GatewayNormalizationRule.yaml
+
+GatewayRegistration:
+  $ref: ./GatewayRegistration.yaml
+
+GatewaySettings:
+  $ref: ./GatewaySettings.yaml

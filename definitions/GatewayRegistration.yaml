@@ -1,0 +1,32 @@
+type: object
+properties:
+  status:
+    type: string
+    enum:
+    - REGED
+    - UNREGED
+
+  # Inbound properties
+  expire:
+    type: string
+    description: Expire is seconds for inbound registration
+  networkIp:
+    type: string
+    description: Remote IP address for inbound registration
+  networkPort:
+    type: string
+    description: Remote Port for inbound registration
+  contact:
+    type: string
+    description: Remote contact information for inbound registration
+  ua:
+    type: string
+    description: Remote User Agent for inbound registration
+
+  # Outbound properties
+  statusCode:
+    type: string
+    description: Status code for outbound registration
+  statusPhrase:
+    type: string
+    description: Status phase for outbound registration
