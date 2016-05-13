@@ -54,3 +54,18 @@ GatewayRegistration:
 
 GatewaySettings:
   $ref: ./GatewaySettings.yaml
+
+Cdr:
+  $ref: ./Cdr.yaml
+
+CdrCondition:
+  $ref: ./CdrCondition.yaml
+
+CdrParticipant:
+  $ref: ./CdrParticipant.yaml
+
+CdrResult:
+  $ref: ./CdrResult.yaml
+
+CdrSummary:
+  $ref: ./CdrSummary.yaml

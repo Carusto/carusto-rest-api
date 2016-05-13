@@ -1,0 +1,19 @@
+post:
+  tags:
+   - cdr
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/cdrId"
+    - $ref: "#/parameters/cdrTag"
+    - $ref: "#/parameters/cdrCondition"
+    - $ref: "#/parameters/cdrLimit"
+    - $ref: "#/parameters/cdrOffset"
+    - $ref: "#/parameters/cdrDirection"
+    - $ref: "#/parameters/cdrOrder"
+    - $ref: "#/parameters/cdrSummary"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/CdrResult'

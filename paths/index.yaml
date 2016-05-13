@@ -39,3 +39,6 @@
 
 /gateways/{id}:
   $ref: ./gatewaysChange.yaml
+
+/cdr:
+  $ref: ./cdr.yaml

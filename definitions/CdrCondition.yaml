@@ -1,0 +1,12 @@
+type: object
+properties:
+  field:
+    type: string
+  operator:
+    type: string
+    enum:
+      - MORE
+      - LESS
+      - EQUALS
+  value:
+    type: string

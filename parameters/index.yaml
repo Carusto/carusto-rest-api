@@ -335,3 +335,88 @@ gatewayHost:
   in: formData
   required: false
   type: string
+
+
+########################################
+# CDR parameters
+########################################
+
+cdrId:
+  name: id
+  in: formData
+  required: false
+  type: string
+
+cdrTag:
+  name: tag
+  in: formData
+  required: false
+  type: string
+  enum:
+    - ANSWERED
+    - ABANDONED
+    - HANGUPED
+    - TRANSFERED
+    - UNANSWERED
+    - RECORDED
+    - PICKED
+    - LOCAL
+    - INCOMING
+    - OUTGOING
+
+cdrCondition:
+  name: condition
+  in: formData
+  required: false
+  type: array
+  collectionFormat: multi
+  items:
+    type: object
+    $ref: "#/definitions/CdrCondition"
+
+cdrLimit:
+  name: limit
+  in: formData
+  required: false
+  type: integer
+  format: int32
+  default: 500
+
+cdrOffset:
+  name: offset
+  in: formData
+  required: false
+  type: integer
+  format: int32
+  default: 0
+
+cdrDirection:
+  name: direction
+  in: formData
+  required: false
+  type: string
+  enum:
+    - ASC
+    - DESC
+  default: DESC
+
+cdrOrder:
+  name: order
+  in: formData
+  required: false
+  type: string
+  enum:
+    - time
+    - total_time
+    - talk_time
+    - hold_time
+    - ring_time
+    - call_id
+  default: call_id
+
+cdrSummary:
+  name: summary
+  in: formData
+  required: false
+  type: boolean
+  default: false

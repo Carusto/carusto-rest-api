@@ -1,0 +1,29 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  from:
+    $ref: "#/definitions/CdrParticipant"
+  to:
+    type: array
+    items:
+      $ref: "#/definitions/CdrParticipant"
+  destination:
+    type: string
+  time:
+    type: string
+  ringTime:
+    type: integer
+  talkTime:
+    type: integer
+  holdTime:
+    type: integer
+  attachments:
+    type: array
+    items:
+      type: string
+  tags:
+    type: array
+    items:
+      type: string
