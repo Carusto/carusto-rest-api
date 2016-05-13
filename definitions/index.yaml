@@ -55,6 +55,9 @@ GatewayRegistration:
 GatewaySettings:
   $ref: ./GatewaySettings.yaml
 
+Sound:
+  $ref: ./Sound.yaml
+
 Cdr:
   $ref: ./Cdr.yaml
 

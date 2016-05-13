@@ -40,5 +40,11 @@
 /gateways/{id}:
   $ref: ./gatewaysChange.yaml
 
+/sounds:
+  $ref: ./sounds.yaml
+
+/sounds/{id}:
+  $ref: ./soundsChange.yaml
+
 /cdr:
   $ref: ./cdr.yaml

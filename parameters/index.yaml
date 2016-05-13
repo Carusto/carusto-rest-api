@@ -120,14 +120,14 @@ userExtension:
 userMail:
   name: mail
   in: formData
-  required: true
+  required: false
   type: string
   default: john.doe@example.com
 
 userLanguage:
   name: language
   in: formData
-  required: true
+  required: false
   type: string
   default: en
 
@@ -336,6 +336,48 @@ gatewayHost:
   required: false
   type: string
 
+
+########################################
+# Sounds parameters
+########################################
+
+soundId:
+  name: id
+  in: path
+  description: Sound ID
+  required: true
+  type: integer
+  format: int32
+
+soundFile:
+  name: file
+  in: formData
+  required: true
+  type: file
+
+soundFileName:
+  name: fileName
+  in: formData
+  required: false
+  type: string
+
+soundLanguage:
+  name: language
+  in: formData
+  required: false
+  type: string
+
+soundName:
+  name: name
+  in: formData
+  required: false
+  type: string
+
+soundDescription:
+  name: description
+  in: formData
+  required: false
+  type: string
 
 ########################################
 # CDR parameters

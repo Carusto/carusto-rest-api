@@ -1,0 +1,10 @@
+delete:
+  tags:
+   - sounds
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/soundId"
+  responses:
+    200:
+      description: Successful response

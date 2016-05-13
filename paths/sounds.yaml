@@ -1,0 +1,32 @@
+get:
+  tags:
+   - sounds
+  security:
+   - basicAuth: []
+  description: |
+    Gets `Sound` objects.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Sound"
+post:
+  tags:
+   - sounds
+  security:
+   - basicAuth: []
+  consumes:
+     - multipart/form-data
+  parameters:
+    - $ref: "#/parameters/soundFile"
+    - $ref: "#/parameters/soundFileName"
+    - $ref: "#/parameters/soundLanguage"
+    - $ref: "#/parameters/soundName"
+    - $ref: "#/parameters/soundDescription"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Sound'
