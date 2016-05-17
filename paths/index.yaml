@@ -40,6 +40,12 @@
 /gateways/{id}:
   $ref: ./gatewaysChange.yaml
 
+/databases:
+  $ref: ./databases.yaml
+
+/databases/{id}:
+  $ref: ./databasesChange.yaml
+
 /sounds:
   $ref: ./sounds.yaml
 

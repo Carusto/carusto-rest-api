@@ -1,0 +1,16 @@
+type: object
+properties:
+  url:
+    type: string
+  username:
+    type: string
+  databaseName:
+    type: string
+  databaseVersion:
+    type: string
+  driverName:
+    type: string
+  driverVersion:
+    type: string
+  jdbcVersion:
+    type: string

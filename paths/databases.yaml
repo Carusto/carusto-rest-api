@@ -1,0 +1,29 @@
+get:
+  tags:
+   - gateways
+  security:
+   - basicAuth: []
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: "#/definitions/Database"
+post:
+  tags:
+   - databases
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/databaseDescription"
+    - $ref: "#/parameters/databaseType"
+    - $ref: "#/parameters/databaseUrl"
+    - $ref: "#/parameters/databaseUsername"
+    - $ref: "#/parameters/databasePassword"
+    - $ref: "#/parameters/databaseProperties"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Database'

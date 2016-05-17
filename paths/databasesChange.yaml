@@ -1,0 +1,28 @@
+put:
+  tags:
+   - databases
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/databaseId"
+    - $ref: "#/parameters/databaseDescription"
+    - $ref: "#/parameters/databaseType"
+    - $ref: "#/parameters/databaseUrl"
+    - $ref: "#/parameters/databaseUsername"
+    - $ref: "#/parameters/databasePassword"
+    - $ref: "#/parameters/databaseProperties"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Database'
+delete:
+  tags:
+   - databases
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/databaseId"
+  responses:
+    200:
+      description: Successful response

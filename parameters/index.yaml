@@ -338,6 +338,64 @@ gatewayHost:
 
 
 ########################################
+# Databases parameters
+########################################
+
+databaseId:
+  name: id
+  in: path
+  description: Database Connection ID
+  required: true
+  type: integer
+  format: int32
+
+databaseDescription:
+  name: description
+  in: formData
+  required: true
+  type: string
+
+databaseType:
+  name: type
+  in: formData
+  required: true
+  type: string
+  enum:
+    - MYSQL
+    - MSSQL
+    - POSTGRESQL
+    - ORACLE
+
+databaseUrl:
+  name: url
+  in: formData
+  required: true
+  type: string
+
+databaseUsername:
+  name: username
+  in: formData
+  required: true
+  type: string
+
+databasePassword:
+  name: password
+  in: formData
+  required: true
+  type: string
+
+databaseProperties:
+  name: properties
+  in: formData
+  description: Additional properties for connection
+  required: false
+  type: array
+  collectionFormat: multi
+  items:
+    type: object
+
+
+########################################
 # Sounds parameters
 ########################################
 

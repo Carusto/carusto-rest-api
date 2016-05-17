@@ -58,6 +58,12 @@ GatewaySettings:
 Sound:
   $ref: ./Sound.yaml
 
+Database:
+  $ref: ./Database.yaml
+
+DatabaseInfo:
+  $ref: ./DatabaseInfo.yaml
+
 Cdr:
   $ref: ./Cdr.yaml
 

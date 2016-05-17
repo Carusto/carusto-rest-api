@@ -1,0 +1,19 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  description:
+    type: string
+  type:
+    type: string
+  url:
+    type: string
+  username:
+    type: string
+  password:
+    type: string
+  properties:
+    type: object
+    additionalProperties:
+      type: object
