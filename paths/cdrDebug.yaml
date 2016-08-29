@@ -1,0 +1,12 @@
+get:
+  tags:
+   - cdr
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/cdrCallId"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: "#/definitions/CdrDebug"

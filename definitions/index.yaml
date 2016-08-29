@@ -96,3 +96,15 @@ CdrFlowRoute:
 
 CdrFlowTag:
   $ref: ./CdrFlowTag.yaml
+
+CdrDebug:
+  $ref: ./CdrDebug.yaml
+
+CdrDebugApplication:
+  $ref: ./CdrDebugApplication.yaml
+
+CdrDebugItem:
+  $ref: ./CdrDebugItem.yaml
+
+CdrDebugLog:
+  $ref: ./CdrDebugLog.yaml

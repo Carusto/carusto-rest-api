@@ -1,0 +1,14 @@
+type: object
+properties:
+  time:
+    type: integer
+    format: int64
+  message:
+    type: string
+  severity:
+    type: string
+    enum:
+    - DEBUG
+    - NOTICE
+    - WARNING
+    - ERROR
