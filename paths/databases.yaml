@@ -1,6 +1,6 @@
 get:
   tags:
-   - gateways
+   - databases
   security:
    - basicAuth: []
   responses:

@@ -4,7 +4,7 @@ post:
   security:
    - basicAuth: []
   parameters:
-    - $ref: "#/parameters/cdrId"
+    - $ref: "#/parameters/cdrSipCallId"
     - $ref: "#/parameters/cdrTag"
     - $ref: "#/parameters/cdrCondition"
     - $ref: "#/parameters/cdrLimit"

@@ -78,3 +78,21 @@ CdrResult:
 
 CdrSummary:
   $ref: ./CdrSummary.yaml
+
+CdrFlow:
+  $ref: ./CdrFlow.yaml
+
+CdrFlowCompletive:
+  $ref: ./CdrFlowCompletive.yaml
+
+CdrFlowGateway:
+  $ref: ./CdrFlowCompletive.yaml
+
+CdrFlowAttachment:
+  $ref: ./CdrFlowAttachment.yaml
+
+CdrFlowRoute:
+  $ref: ./CdrFlowRoute.yaml
+
+CdrFlowTag:
+  $ref: ./CdrFlowTag.yaml

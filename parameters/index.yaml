@@ -394,7 +394,6 @@ databaseProperties:
   items:
     type: object
 
-
 ########################################
 # Sounds parameters
 ########################################
@@ -441,7 +440,15 @@ soundDescription:
 # CDR parameters
 ########################################
 
-cdrId:
+cdrCallId:
+  name: id
+  in: path
+  description: CDR ID
+  required: true
+  type: integer
+  format: int32
+
+cdrSipCallId:
   name: id
   in: formData
   required: false

@@ -54,3 +54,6 @@
 
 /cdr:
   $ref: ./cdr.yaml
+
+/cdr/{id}:
+  $ref: ./cdrFlows.yaml

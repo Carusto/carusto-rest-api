@@ -1,0 +1,105 @@
+type: object
+properties:
+  flow_id:
+    type: integer
+    format: int32
+  sip_call_id:
+    type: string
+  flow_type:
+    type: string
+    enum:
+    - initial
+    - sequence
+  from:
+    type: string
+  from_type:
+    type: string
+    enum:
+    - user
+    - number
+    - contact
+    - group
+    - queue
+    - gateway
+    - conference
+    - service
+  from_name:
+    type: string
+  from_number:
+    type: string
+  to:
+    type: string
+  to_type:
+    type: string
+    enum:
+    - user
+    - number
+    - contact
+    - group
+    - queue
+    - gateway
+    - conference
+    - service
+  to_name:
+    type: string
+  to_number:
+    type: string
+  time:
+    type: string
+  invite_time:
+    type: string
+  hangup_time:
+    type: string
+
+  total_time:
+    type: integer
+    format: int32
+  talk_time:
+    type: integer
+    format: int32
+  ring_time:
+    type: integer
+    format: int32
+  status:
+    type: string
+    enum:
+    - not_found
+    - user_busy
+    - no_answer
+    - canceled
+    - bad_gateway
+    - gateway_timeout
+    - address_incomplete
+    - not_implemented
+    - temporarily_unavailable
+    - service_unavailable
+    - not_acceptable_here
+    - too_many_hops
+    - not_registered
+    - answered
+    - missed
+    - picked
+    - transferred
+    - unknown
+  cause:
+    type: string
+  destination:
+    type: string
+  completive:
+    $ref: "#/definitions/CdrFlowCompletive"
+  gateways:
+    type: array
+    items:
+      $ref: "#/definitions/CdrFlowGateway"
+  routes:
+    type: array
+    items:
+      $ref: "#/definitions/CdrFlowRoute"
+  attachments:
+    type: array
+    items:
+      $ref: "#/definitions/CdrFlowAttachment"
+  tags:
+    type: array
+    items:
+      $ref: "#/definitions/CdrFlowTag"

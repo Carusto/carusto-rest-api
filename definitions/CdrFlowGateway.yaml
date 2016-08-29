@@ -1,0 +1,40 @@
+type: object
+properties:
+  id:
+    type: string
+  name:
+    type: string
+  cause:
+    type: string
+  cause:
+    type: string
+  status:
+    type: string
+  direction:
+    type: string
+
+  owner:
+    type: string
+  owner_type:
+    type: string
+  owner_type:
+    type: string
+  owner_type:
+    type: string
+  owner_name:
+    type: string
+  owner_number:
+    type: string
+
+  time:
+    type: string
+
+  duration:
+    type: integer
+    format: int32
+  talk_time:
+    type: integer
+    format: int32
+  ring_time:
+    type: integer
+    format: int32

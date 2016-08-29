@@ -1,0 +1,10 @@
+type: object
+properties:
+  cause:
+    type: string
+  time:
+    type: string
+  ua:
+    type: string
+  address:
+    type: string
