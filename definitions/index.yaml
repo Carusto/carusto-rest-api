@@ -108,3 +108,9 @@ CdrDebugItem:
 
 CdrDebugLog:
   $ref: ./CdrDebugLog.yaml
+
+ExecuteResult:
+  $ref: ./ExecuteResult.yaml
+
+ExecuteStartResult:
+  $ref: ./ExecuteStartResult.yaml

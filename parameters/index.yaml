@@ -527,3 +527,38 @@ cdrSummary:
   required: false
   type: boolean
   default: false
+
+########################################
+# Run parameters
+########################################
+
+executeData:
+  name: data
+  in: formData
+  required: true
+  type: string
+  default: false
+
+executeStartId:
+  name: id
+  in: path
+  required: true
+  type: string
+
+executeSnippetId:
+  name: id
+  in: path
+  required: true
+  type: integer
+  format: int32
+
+executeSnippetParameters:
+  name: params
+  in: formData
+  description: Additional parameters that required by specified Snippet.
+  required: false
+  type: array
+  collectionFormat: multi
+  items:
+    type: object
+

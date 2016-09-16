@@ -1,0 +1,12 @@
+post:
+  tags:
+   - execute
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/executeData"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/ExecuteStartResult'

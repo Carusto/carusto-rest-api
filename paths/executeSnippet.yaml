@@ -1,0 +1,13 @@
+post:
+  tags:
+   - execute
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/executeSnippetId"
+    - $ref: "#/parameters/executeSnippetParameters"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/ExecuteStartResult'

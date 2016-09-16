@@ -60,3 +60,19 @@
 
 /cdr/{id}/debug:
   $ref: ./cdrDebug.yaml
+
+/execute/:
+  $ref: ./execute.yaml
+
+/execute/sync:
+  $ref: ./executeSync.yaml
+
+/execute/snippet/{id}:
+  $ref: ./executeSnippet.yaml
+
+/execute/snippet/{id}/sync:
+  $ref: ./executeSnippetSync.yaml
+
+/execute/result/{id}:
+  $ref: ./executeResult.yaml
+
