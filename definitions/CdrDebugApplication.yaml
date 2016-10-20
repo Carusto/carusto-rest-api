@@ -2,7 +2,22 @@ type: object
 properties:
   id:
     type: string
-  name:
+  thread_id:
     type: string
-  values:
+  application:
     type: object
+    properties:
+      id: 
+        type: string
+      name:
+        type: string
+  time_start:
+    type: integer
+    format: int64
+  time_stop:
+    type: integer
+    format: int64
+  logs:
+    type: array
+    items:
+      $ref: "#/definitions/CdrDebugLog"

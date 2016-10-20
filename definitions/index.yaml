@@ -103,8 +103,8 @@ CdrDebug:
 CdrDebugApplication:
   $ref: ./CdrDebugApplication.yaml
 
-CdrDebugItem:
-  $ref: ./CdrDebugItem.yaml
+CdrDebugThread:
+  $ref: ./CdrDebugThread.yaml
 
 CdrDebugLog:
   $ref: ./CdrDebugLog.yaml

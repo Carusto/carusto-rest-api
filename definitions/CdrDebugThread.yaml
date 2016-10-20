@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    type: string
+  time_start:
+    type: integer
+    format: int64
+  time_stop:
+    type: integer
+    format: int64
