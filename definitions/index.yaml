@@ -1,3 +1,22 @@
+AbstractResponse:
+  $ref: ./AbstractResponse.yaml
+
+AsyncResponse:
+  $ref: ./AsyncResponse.yaml
+
+GenericResponse:
+  $ref: ./GenericResponse.yaml
+
+# =========================
+# Call routes
+# =========================
+
+RouteResponse:
+  $ref: ./RouteResponse.yaml
+
+RoutesResponse:
+  $ref: ./RoutesResponse.yaml
+
 Route:
   $ref: ./Route.yaml
 
@@ -7,26 +26,18 @@ RouteApplication:
 RouteCondition:
   $ref: ./RouteCondition.yaml
 
-Snippet:
-  $ref: ./Snippet.yaml
+# =========================
+# Accounting
+# =========================
 
-SnippetApplication:
-  $ref: ./SnippetApplication.yaml
+UserResponse:
+  $ref: ./UserResponse.yaml
 
-SnippetArgument:
-  $ref: ./SnippetArgument.yaml
+UsersResponse:
+  $ref: ./UsersResponse.yaml
 
-Company:
-  $ref: ./Company.yaml
-
-CompanyService:
-  $ref: ./CompanyService.yaml
-
-Group:
-  $ref: ./Group.yaml
-
-GroupSettings:
-  $ref: ./GroupSettings.yaml
+UsersWithPasswordResponse:
+  $ref: ./UsersWithPasswordResponse.yaml
 
 User:
   $ref: ./User.yaml
@@ -39,6 +50,28 @@ UserPreferences:
 
 UserRegistration:
   $ref: ./UserRegistration.yaml
+
+GroupResponse:
+  $ref: ./GroupResponse.yaml
+
+GroupsResponse:
+  $ref: ./GroupsResponse.yaml
+
+Group:
+  $ref: ./Group.yaml
+
+GroupSettings:
+  $ref: ./GroupSettings.yaml
+
+# =========================
+# Gateways
+# =========================
+
+GatewayResponse:
+  $ref: ./GatewayResponse.yaml
+
+GatewaysResponse:
+  $ref: ./GatewaysResponse.yaml
 
 Gateway:
   $ref: ./Gateway.yaml
@@ -55,14 +88,51 @@ GatewayRegistration:
 GatewaySettings:
   $ref: ./GatewaySettings.yaml
 
+# =========================
+# Integration
+# =========================
+
+IntegrationDatabaseResponse:
+  $ref: ./IntegrationDatabaseResponse.yaml
+
+IntegrationDatabasesResponse:
+  $ref: ./IntegrationDatabasesResponse.yaml
+
+IntegrationDatabase:
+  $ref: ./IntegrationDatabase.yaml
+
+IntegrationDatabaseInfo:
+  $ref: ./IntegrationDatabaseInfo.yaml
+
+# =========================
+# Components
+# =========================
+
+SoundResponse:
+  $ref: ./SoundResponse.yaml
+
+SoundsResponse:
+  $ref: ./SoundsResponse.yaml
+
 Sound:
   $ref: ./Sound.yaml
 
-Database:
-  $ref: ./Database.yaml
 
-DatabaseInfo:
-  $ref: ./DatabaseInfo.yaml
+# =========================
+# Telephony
+# =========================
+
+CdrResponse:
+  $ref: ./CdrResponse.yaml
+
+CdrResponseData:
+  $ref: ./CdrResponseData.yaml
+
+CdrDebugResponse:
+  $ref: ./CdrDebugResponse.yaml
+
+CdrFlowsResponse:
+  $ref: ./CdrFlowsResponse.yaml
 
 Cdr:
   $ref: ./Cdr.yaml
@@ -72,9 +142,6 @@ CdrCondition:
 
 CdrParticipant:
   $ref: ./CdrParticipant.yaml
-
-CdrResult:
-  $ref: ./CdrResult.yaml
 
 CdrSummary:
   $ref: ./CdrSummary.yaml
@@ -109,8 +176,12 @@ CdrDebugThread:
 CdrDebugLog:
   $ref: ./CdrDebugLog.yaml
 
-ExecuteResult:
-  $ref: ./ExecuteResult.yaml
+CallsResponse:
+  $ref: ./CallsResponse.yaml
 
-ExecuteStartResult:
-  $ref: ./ExecuteStartResult.yaml
+Call:
+  $ref: ./Call.yaml
+
+CallChannel:
+  $ref: ./CallChannel.yaml
+

@@ -1,0 +1,22 @@
+post:
+  operationId: makeCallWithCmlAsync
+  tags:
+   - calls
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/callCml"
+    - $ref: "#/parameters/callCalleeNumber"
+    - $ref: "#/parameters/callCalleeName"
+    - $ref: "#/parameters/callCalleeId"
+    - $ref: "#/parameters/callCalleeType"
+    - $ref: "#/parameters/callCalleeInfo"
+    - $ref: "#/parameters/callDialMethod"
+    - $ref: "#/parameters/callDialNumber"
+    - $ref: "#/parameters/callDialToken"
+    - $ref: "#/parameters/timeout"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/AsyncResponse'

@@ -1,6 +1,7 @@
 post:
+  operationId: getCallHistory
   tags:
-   - cdr
+   - calls
   security:
    - basicAuth: []
   parameters:
@@ -16,4 +17,4 @@ post:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/CdrResult'
+        $ref: '#/definitions/CdrResponse'

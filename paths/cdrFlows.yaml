@@ -1,6 +1,7 @@
 get:
+  operationId: getCallHistoryFlows
   tags:
-   - cdr
+   - calls
   security:
    - basicAuth: []
   parameters:
@@ -9,6 +10,4 @@ get:
     200:
       description: Successful response
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/CdrFlow"
+        $ref: "#/definitions/CdrFlowsResponse"

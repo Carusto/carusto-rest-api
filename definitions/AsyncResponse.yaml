@@ -1,0 +1,7 @@
+allOf: 
+  - $ref: "#/definitions/AbstractResponse"
+  - type: object
+    properties:
+      data:
+        type: string
+        description: An unique identifier for request. Use it for further result retrieval.

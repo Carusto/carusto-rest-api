@@ -1,4 +1,5 @@
 get:
+  operationId: getAllSounds
   tags:
    - sounds
   security:
@@ -9,10 +10,9 @@ get:
     200:
       description: Successful response
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/Sound"
+        $ref: "#/definitions/SoundsResponse"
 post:
+  operationId: createSound
   tags:
    - sounds
   security:
@@ -29,4 +29,4 @@ post:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Sound'
+        $ref: '#/definitions/SoundResponse'

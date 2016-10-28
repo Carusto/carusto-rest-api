@@ -1,4 +1,5 @@
 get:
+  operationId: getAllGroups
   tags:
    - groups
   security:
@@ -7,10 +8,9 @@ get:
     200:
       description: Successful response
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/Group"
+        $ref: "#/definitions/GroupsResponse"
 post:
+  operationId: createGroup
   tags:
    - groups
   security:
@@ -22,4 +22,4 @@ post:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Group'
+        $ref: '#/definitions/GroupResponse'

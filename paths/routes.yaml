@@ -1,4 +1,5 @@
 get:
+  operationId: getAllRoutes
   tags:
    - routes
   security:
@@ -9,10 +10,9 @@ get:
     200:
       description: Successful response
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/Route"
+        $ref: "#/definitions/RoutesResponse"
 post:
+  operationId: createRoute
   tags:
    - routes
   security:
@@ -30,4 +30,4 @@ post:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Route'
+        $ref: '#/definitions/RouteResponse'

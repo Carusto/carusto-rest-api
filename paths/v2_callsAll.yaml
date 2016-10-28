@@ -1,11 +1,11 @@
 get:
-  operationId: getAllUsersWithPassword
+  operationId: getAllCalls
   tags:
-   - users
+   - calls
   security:
    - basicAuth: []
   responses:
     200:
       description: Successful response
       schema:
-        $ref: "#/definitions/UsersWithPasswordResponse"
+        $ref: '#/definitions/CallsResponse'

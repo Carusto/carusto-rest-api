@@ -1,12 +1,13 @@
 post:
+  operationId: muteCall
   tags:
-   - execute
+   - calls
   security:
    - basicAuth: []
   parameters:
-    - $ref: "#/parameters/executeData"
+    - $ref: "#/parameters/idInPath"
   responses:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/ExecuteResult'
+        $ref: '#/definitions/GenericResponse'

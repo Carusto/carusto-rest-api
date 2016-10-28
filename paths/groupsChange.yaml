@@ -1,4 +1,5 @@
 put:
+  operationId: updateGroup
   tags:
    - groups
   security:
@@ -11,8 +12,9 @@ put:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Group'
+        $ref: '#/definitions/GroupResponse'
 delete:
+  operationId: deleteGroup
   tags:
    - groups
   security:
@@ -22,3 +24,5 @@ delete:
   responses:
     200:
       description: Successful response
+      schema:
+        $ref: '#/definitions/AbstractResponse'

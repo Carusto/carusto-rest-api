@@ -1,4 +1,5 @@
 put:
+  operationId: updateRoute
   tags:
    - routes
   security:
@@ -16,8 +17,9 @@ put:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Route'
+        $ref: '#/definitions/RouteResponse'
 delete:
+  operationId: deleteRoute
   tags:
    - routes
   security:
@@ -29,3 +31,5 @@ delete:
   responses:
     200:
       description: Successful response
+      schema:
+        $ref: '#/definitions/AbstractResponse'

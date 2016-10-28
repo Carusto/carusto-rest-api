@@ -1,13 +1,13 @@
-get:
-  operationId: getCallHistoryDebug
+post:
+  operationId: stopRecordCall
   tags:
    - calls
   security:
    - basicAuth: []
   parameters:
-    - $ref: "#/parameters/cdrCallId"
+    - $ref: "#/parameters/idInPath"
   responses:
     200:
       description: Successful response
       schema:
-        $ref: "#/definitions/CdrDebugResponse"
+        $ref: '#/definitions/GenericResponse'

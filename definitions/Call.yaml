@@ -1,0 +1,40 @@
+type: object
+properties:
+  id:
+    type: string
+  state:
+    type: string
+    enum:
+    - down
+    - hangup
+    - undefined
+    - dialing
+    - ringing
+    - ring_wait
+    - early
+    - active
+    - held
+    - unhold
+  direction:
+    type: string
+  callee_number:
+    type: string
+  callee_name:
+    type: string
+  callee_id:
+    type: string
+  callee_type:
+    type: string
+  callee_info:
+    type: string
+  duration: 
+    type: integer
+    format: int32
+  flags:
+    type: array
+    items:
+      type: string
+  channels:
+    type: array
+    items:
+      $ref: "#/definitions/CallChannel"

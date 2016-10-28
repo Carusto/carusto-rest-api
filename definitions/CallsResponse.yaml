@@ -1,0 +1,9 @@
+allOf: 
+  - $ref: "#/definitions/AbstractResponse"
+  - title: A Something struct is used by other structs
+  - type: object
+    properties:
+      data:
+        type: array
+        items:
+          $ref: "#/definitions/Call"

@@ -1,23 +1,8 @@
-/companies:
-  $ref: ./companies.yaml
-
-/companies/{id}:
-  $ref: ./companiesChange.yaml
-
-/companies/delete/{id}:
-  $ref: ./companiesDelete.yaml
-
 /routes:
   $ref: ./routes.yaml
 
 /routes/{id}:
   $ref: ./routesChange.yaml
-
-/snippets:
-  $ref: ./snippets.yaml
-
-/snippets/{id}:
-  $ref: ./snippetsChange.yaml
 
 /users:
   $ref: ./users.yaml
@@ -41,10 +26,10 @@
   $ref: ./gatewaysChange.yaml
 
 /databases:
-  $ref: ./databases.yaml
+  $ref: ./integrationDatabases.yaml
 
 /databases/{id}:
-  $ref: ./databasesChange.yaml
+  $ref: ./integrationDatabasesChange.yaml
 
 /sounds:
   $ref: ./sounds.yaml
@@ -61,18 +46,77 @@
 /cdr/{id}/debug:
   $ref: ./cdrDebug.yaml
 
-/execute/:
-  $ref: ./execute.yaml
+/v2/async/{id}:
+  $ref: ./v2_async.yaml
 
-/execute/sync:
-  $ref: ./executeSync.yaml
+/v2/cml/:
+  $ref: ./v2_cml.yaml
 
-/execute/snippet/{id}:
-  $ref: ./executeSnippet.yaml
+/v2/cml/sync:
+  $ref: ./v2_cmlSync.yaml
 
-/execute/snippet/{id}/sync:
-  $ref: ./executeSnippetSync.yaml
+/v2/calls/:
+  $ref: ./v2_calls.yaml
 
-/execute/result/{id}:
-  $ref: ./executeResult.yaml
+/v2/calls/all:
+  $ref: ./v2_callsAll.yaml
 
+/v2/calls/new/async:
+  $ref: ./v2_callsNew.yaml
+
+/v2/calls/new/sync:
+  $ref: ./v2_callsNewSync.yaml
+
+/v2/calls/new/cml/async:
+  $ref: ./v2_callsNewCml.yaml
+
+/v2/calls/new/cml/sync:
+  $ref: ./v2_callsNewCmlSync.yaml
+
+/v2/calls/{id}/answer:
+  $ref: ./v2_callAnswer.yaml
+
+/v2/calls/{id}/hangup:
+  $ref: ./v2_callHangup.yaml
+
+/v2/calls/{id}/decline:
+  $ref: ./v2_callDecline.yaml
+
+/v2/calls/{id}/hold:
+  $ref: ./v2_callHold.yaml
+
+/v2/calls/{id}/resume:
+  $ref: ./v2_callResume.yaml
+
+/v2/calls/{id}/mute:
+  $ref: ./v2_callMute.yaml
+
+/v2/calls/{id}/unmute:
+  $ref: ./v2_callUnmute.yaml
+
+/v2/calls/{id}/start_record:
+  $ref: ./v2_callStartRecord.yaml
+
+/v2/calls/{id}/stop_record:
+  $ref: ./v2_callStopRecord.yaml
+
+/v2/calls/{id}/forward:
+  $ref: ./v2_callForward.yaml
+
+/v2/calls/{id}/bridge:
+  $ref: ./v2_callBridge.yaml
+
+/v2/calls/{id}/pickup:
+  $ref: ./v2_callPickup.yaml
+
+/v2/calls/{id}/intrusion:
+  $ref: ./v2_callIntrusion.yaml
+
+/v2/calls/{id}/intrusion_silent:
+  $ref: ./v2_callIntrusionSilent.yaml
+
+/v2/calls/{id}/intrusion_subscriber:
+  $ref: ./v2_callIntrusionSubscriber.yaml
+
+/v2/calls/{id}/intrusion_conference:
+  $ref: ./v2_callIntrusionConference.yaml

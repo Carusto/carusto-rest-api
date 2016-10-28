@@ -1,13 +1,13 @@
-delete:
-  operationId: deleteSound
+post:
+  operationId: executeSync
   tags:
-   - sounds
+   - cml
   security:
    - basicAuth: []
   parameters:
-    - $ref: "#/parameters/soundId"
+    - $ref: "#/parameters/cmlData"
   responses:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/AbstractResponse'
+        $ref: '#/definitions/GenericResponse'

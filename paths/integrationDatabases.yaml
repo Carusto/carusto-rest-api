@@ -1,18 +1,18 @@
 get:
+  operationId: getAllDatabasesConnections
   tags:
-   - databases
+   - integration
   security:
    - basicAuth: []
   responses:
     200:
       description: Successful response
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/Database"
+        $ref: "#/definitions/IntegrationDatabasesResponse"
 post:
+  operationId: createDatabaseConnection
   tags:
-   - databases
+   - integration
   security:
    - basicAuth: []
   parameters:
@@ -26,4 +26,4 @@ post:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Database'
+        $ref: '#/definitions/IntegrationDatabaseResponse'

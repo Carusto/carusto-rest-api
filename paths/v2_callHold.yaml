@@ -1,13 +1,13 @@
 post:
+  operationId: holdCall
   tags:
-   - companies
+   - calls
   security:
    - basicAuth: []
   parameters:
-    - $ref: "#/parameters/password"
-    - $ref: "#/parameters/companyId"
+    - $ref: "#/parameters/idInPath"
   responses:
     200:
       description: Successful response
       schema:
-        type: boolean
+        $ref: '#/definitions/GenericResponse'

@@ -1,4 +1,5 @@
 get:
+  operationId: getAllGateways
   tags:
    - gateways
   security:
@@ -7,10 +8,9 @@ get:
     200:
       description: Successful response
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/Gateway"
+        $ref: "#/definitions/GatewaysResponse"
 post:
+  operationId: createGateway
   tags:
    - gateways
   security:
@@ -25,4 +25,4 @@ post:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Gateway'
+        $ref: '#/definitions/GatewayResponse'

@@ -1,6 +1,7 @@
 put:
+  operationId: updateDatabaseConnection
   tags:
-   - databases
+   - integration
   security:
    - basicAuth: []
   parameters:
@@ -15,10 +16,11 @@ put:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/Database'
+        $ref: '#/definitions/IntegrationDatabaseResponse'
 delete:
+  operationId: deleteDatabaseConnection
   tags:
-   - databases
+   - integration
   security:
    - basicAuth: []
   parameters:
@@ -26,3 +28,5 @@ delete:
   responses:
     200:
       description: Successful response
+      schema:
+        $ref: '#/definitions/AbstractResponse'

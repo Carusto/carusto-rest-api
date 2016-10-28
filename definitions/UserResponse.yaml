@@ -1,0 +1,6 @@
+allOf: 
+  - $ref: "#/definitions/AbstractResponse"
+  - type: object
+    properties:
+      data:
+        $ref: "#/definitions/User"

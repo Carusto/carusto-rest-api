@@ -1,0 +1,21 @@
+post:
+  operationId: makeCallSync
+  tags:
+   - calls
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/callDestNumber"
+    - $ref: "#/parameters/callDestName"
+    - $ref: "#/parameters/callDestId"
+    - $ref: "#/parameters/callDestType"
+    - $ref: "#/parameters/callDestInfo"
+    - $ref: "#/parameters/callDialMethod"
+    - $ref: "#/parameters/callDialNumber"
+    - $ref: "#/parameters/callDialToken"
+    - $ref: "#/parameters/timeout"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/GenericResponse'

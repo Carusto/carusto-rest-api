@@ -1,12 +1,11 @@
-post:
-  tags:
-   - execute
+get:
+  operationId: getAsyncResponse
   security:
    - basicAuth: []
   parameters:
-    - $ref: "#/parameters/executeData"
+    - $ref: "#/parameters/idInPath"
   responses:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/ExecuteStartResult'
+        $ref: '#/definitions/GenericResponse'

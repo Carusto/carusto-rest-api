@@ -1,4 +1,5 @@
 get:
+  operationId: getAllUsers
   tags:
    - users
   security:
@@ -7,10 +8,9 @@ get:
     200:
       description: Successful response
       schema:
-        type: array
-        items:
-          $ref: "#/definitions/User"
+        $ref: "#/definitions/UsersResponse"
 post:
+  operationId: createUser
   tags:
    - users
   security:
@@ -30,4 +30,4 @@ post:
     200:
       description: Successful response
       schema:
-        $ref: '#/definitions/User'
+        $ref: '#/definitions/UserResponse'

@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    type: string
+  sip_id:
+    description: An unique ID that used in SIP
+    type: string
+  reg_id:
+    description: An unique device ID for channel
+    type: string

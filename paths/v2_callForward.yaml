@@ -1,0 +1,19 @@
+post:
+  operationId: forwardCall
+  tags:
+   - calls
+  security:
+   - basicAuth: []
+  parameters:
+    - $ref: "#/parameters/idInPath"
+    -
+      name: destination 
+      in: query
+      description: Destiantion to call to
+      required: true
+      type: string
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/GenericResponse'

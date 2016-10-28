@@ -1,13 +1,25 @@
 
 ########################################
-# Common parameters
+# Generic parameters
 ########################################
+
+idInPath:
+  name: id
+  in: path
+  required: true
+  type: string
 
 password:
   name: password
   in: formData
   description: Authentication password
   required: true
+  type: string
+
+timeout:
+  name: timeout
+  in: formData
+  required: false
   type: string
 
 ########################################
@@ -529,36 +541,145 @@ cdrSummary:
   default: false
 
 ########################################
-# Run parameters
+# CML parameters
 ########################################
 
-executeData:
+cmlData:
   name: data
   in: formData
   required: true
   type: string
   default: false
 
-executeStartId:
-  name: id
-  in: path
+########################################
+# Calls parameters
+########################################
+
+callCml:
+  name: cml
+  in: formData
   required: true
   type: string
 
-executeSnippetId:
-  name: id
-  in: path
+callDestNumber:
+  name: dest_number
+  in: query
   required: true
-  type: integer
-  format: int32
+  type: string
 
-executeSnippetParameters:
-  name: params
+callCalleeNumber:
+  name: dest_number
   in: formData
-  description: Additional parameters that required by specified Snippet.
   required: false
-  type: array
-  collectionFormat: multi
-  items:
-    type: object
+  type: string
+
+callDestName:
+  name: dest_name
+  in: formData
+  required: false
+  type: string
+
+callCalleeName:
+  name: dest_name
+  in: formData
+  required: false
+  type: string
+
+callDestId:
+  name: dest_id
+  in: formData
+  required: false
+  type: string
+
+callCalleeId:
+  name: dest_id
+  in: formData
+  required: false
+  type: string
+
+callDestType:
+  name: dest_type
+  in: formData
+  required: false
+  type: string
+  enum:
+  - user
+  - number
+  - contact
+  - group
+  - queue
+  - ivr
+  - conference
+  - service
+  default: number
+
+callCalleeType: 
+  name: dest_type
+  in: formData
+  required: false
+  type: string
+  enum:
+  - user
+  - number
+  - contact
+  - group
+  - queue
+  - ivr
+  - conference
+  - service
+
+callDestInfo: 
+  name: dest_info
+  in: formData
+  required: false
+  type: string
+
+callCalleeInfo:
+  name: dest_info
+  in: formData
+  required: false
+  type: string
+
+callDialMethod:
+  name: dial_method
+  in: formData
+  required: false
+  type: string
+  enum:
+  - default
+  - call_through_device
+  - call_through_mobility
+  default: default
+
+callDialNumber:
+  name: dial_number
+  description: Phone number to call to. Used only if "dial_method" is "call_through_mobility".
+  in: formData
+  required: false
+  type: string
+
+callDialToken:
+  name: dail_token
+  description: An device identifier to call to. Used only if "dial_method" is "call_through_device".
+  in: formData
+  required: false
+  type: string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
