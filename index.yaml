@@ -5,7 +5,6 @@ info:
   title: Carusto REST API
   x-logo:
     url: "./carusto.png"
-    backgroundColor: "#263238"
   description: |
     A list of APIs to work with Carusto VoIP System
 
