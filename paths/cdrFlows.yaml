@@ -2,8 +2,6 @@ get:
   operationId: getCallHistoryFlows
   tags:
    - calls
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/cdrCallId"
   responses:

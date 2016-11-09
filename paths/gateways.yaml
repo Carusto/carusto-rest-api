@@ -2,8 +2,6 @@ get:
   operationId: getAllGateways
   tags:
    - gateways
-  security:
-   - basicAuth: []
   responses:
     200:
       description: Successful response
@@ -13,8 +11,6 @@ post:
   operationId: createGateway
   tags:
    - gateways
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/gatewayName"
     - $ref: "#/parameters/gatewayType"

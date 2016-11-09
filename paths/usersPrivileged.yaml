@@ -2,8 +2,6 @@ get:
   operationId: getAllUsersWithPassword
   tags:
    - users
-  security:
-   - basicAuth: []
   responses:
     200:
       description: Successful response

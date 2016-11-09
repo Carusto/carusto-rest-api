@@ -103,6 +103,14 @@ userGroupId:
   type: integer
   format: int32
 
+userNewGroupId:
+  name: groupId
+  in: formData
+  description: Group ID
+  required: true
+  type: integer
+  format: int32
+
 userName:
   name: name
   in: formData
@@ -163,6 +171,18 @@ userPreferencesRecordTemplate:
   - ENABLED
   - DISABLED
   default: ENABLED
+
+userInfo:
+  name: info
+  in: body
+  schema:
+    $ref: "#/definitions/UserInfo"
+
+userPreferences:
+  name: preferences
+  in: body
+  schema:
+    $ref: "#/definitions/UserPreferences"
 
 
 ########################################
@@ -255,47 +275,6 @@ routeConditions:
   items:
     type: object
     $ref: "#/definitions/RouteCondition"
-
-########################################
-# Snippets parameters
-########################################
-
-snippetId:
-  name: id
-  in: path
-  description: Snippet ID
-  required: true
-  type: string
-
-snippetName:
-  name: name
-  in: formData
-  description: User defined name
-  required: true
-  type: string
-  default: Custom name
-
-snippetApplications:
-  name: applications
-  in: formData
-  description: Applications that should be evaluted when this Snippet is included
-  required: true
-  type: array
-  collectionFormat: multi
-  items:
-    type: object
-    $ref: "#/definitions/SnippetApplication"
-
-snippetArguments:
-  name: arguments
-  in: formData
-  description: Arguments that should be provided when incliding this Snippet
-  required: true
-  type: array
-  collectionFormat: multi
-  items:
-    type: object
-    $ref: "#/definitions/SnippetArgument"
 
 ########################################
 # Gateways parameters

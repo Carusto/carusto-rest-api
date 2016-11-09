@@ -48,6 +48,15 @@ UserWithPassword:
 UserPreferences:
   $ref: ./UserPreferences.yaml
 
+UserInfo:
+  $ref: ./UserInfo.yaml
+
+UserRequest:
+  $ref: ./UserRequest.yaml
+
+UserInfoProperty:
+  $ref: ./UserInfoProperty.yaml
+
 UserRegistration:
   $ref: ./UserRegistration.yaml
 

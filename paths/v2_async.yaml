@@ -1,7 +1,5 @@
 get:
   operationId: getAsyncResponse
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/idInPath"
   responses:

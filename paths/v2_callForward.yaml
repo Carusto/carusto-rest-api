@@ -2,8 +2,6 @@ post:
   operationId: forwardCall
   tags:
    - calls
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/idInPath"
     -

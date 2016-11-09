@@ -2,8 +2,6 @@ get:
   operationId: getAllRoutes
   tags:
    - routes
-  security:
-   - basicAuth: []
   description: |
     Gets `Route` objects.
   responses:
@@ -15,8 +13,6 @@ post:
   operationId: createRoute
   tags:
    - routes
-  security:
-   - basicAuth: []
   description: |
     Gets `Route` objects.
   parameters:

@@ -2,8 +2,6 @@ delete:
   operationId: deleteSound
   tags:
    - sounds
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/soundId"
   responses:

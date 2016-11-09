@@ -2,8 +2,6 @@ put:
   operationId: updateRoute
   tags:
    - routes
-  security:
-   - basicAuth: []
   description: |
     Gets `Route` objects.
   parameters:
@@ -22,8 +20,6 @@ delete:
   operationId: deleteRoute
   tags:
    - routes
-  security:
-   - basicAuth: []
   description: |
     Gets `Route` objects.
   parameters:

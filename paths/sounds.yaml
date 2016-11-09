@@ -2,8 +2,6 @@ get:
   operationId: getAllSounds
   tags:
    - sounds
-  security:
-   - basicAuth: []
   description: |
     Gets `Sound` objects.
   responses:
@@ -15,8 +13,6 @@ post:
   operationId: createSound
   tags:
    - sounds
-  security:
-   - basicAuth: []
   consumes:
      - multipart/form-data
   parameters:

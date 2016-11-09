@@ -2,8 +2,6 @@ post:
   operationId: executeAsync
   tags:
    - cml
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/cmlData"
   responses:

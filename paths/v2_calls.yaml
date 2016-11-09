@@ -2,8 +2,6 @@ get:
   operationId: getCalls
   tags:
    - calls
-  security:
-   - basicAuth: []
   responses:
     200:
       description: Successful response

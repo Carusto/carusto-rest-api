@@ -1,0 +1,15 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  name:
+    type: string
+  extension:
+    type: string
+  language:
+    type: string
+  info:
+    $ref: "#/definitions/UserInfo"
+  preferences:
+    $ref: "#/definitions/UserPreferences"

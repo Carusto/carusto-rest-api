@@ -2,8 +2,6 @@ post:
   operationId: pickupCall
   tags:
    - calls
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/idInPath"
     - $ref: "#/parameters/callDialMethod"

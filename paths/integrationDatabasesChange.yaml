@@ -2,8 +2,6 @@ put:
   operationId: updateDatabaseConnection
   tags:
    - integration
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/databaseId"
     - $ref: "#/parameters/databaseDescription"

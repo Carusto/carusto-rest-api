@@ -2,8 +2,6 @@ post:
   operationId: executeSync
   tags:
    - cml
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/cmlData"
   responses:

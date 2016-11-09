@@ -2,8 +2,6 @@ get:
   operationId: getAllDatabasesConnections
   tags:
    - integration
-  security:
-   - basicAuth: []
   responses:
     200:
       description: Successful response

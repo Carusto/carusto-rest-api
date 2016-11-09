@@ -2,8 +2,6 @@ get:
   operationId: getAllUsers
   tags:
    - users
-  security:
-   - basicAuth: []
   responses:
     200:
       description: Successful response
@@ -13,8 +11,6 @@ post:
   operationId: createUser
   tags:
    - users
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/userGroupId"
     - $ref: "#/parameters/userName"

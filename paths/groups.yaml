@@ -2,8 +2,6 @@ get:
   operationId: getAllGroups
   tags:
    - groups
-  security:
-   - basicAuth: []
   responses:
     200:
       description: Successful response
@@ -13,8 +11,6 @@ post:
   operationId: createGroup
   tags:
    - groups
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/groupName"
     - $ref: "#/parameters/groupDescription"

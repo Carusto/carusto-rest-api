@@ -2,8 +2,6 @@ put:
   operationId: updateUser
   tags:
    - users
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/userId"
     - $ref: "#/parameters/userGroupId"
@@ -23,8 +21,6 @@ delete:
   operationId: deleteUser
   tags:
    - users
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/userId"
   responses:

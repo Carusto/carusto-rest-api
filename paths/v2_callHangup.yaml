@@ -2,8 +2,6 @@ post:
   operationId: hangupCall
   tags:
    - calls
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/idInPath"
   responses:

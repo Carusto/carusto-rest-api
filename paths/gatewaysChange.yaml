@@ -2,8 +2,6 @@ put:
   operationId: updateGateway
   tags:
    - gateways
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/gatewayId"
     - $ref: "#/parameters/gatewayName"
@@ -20,8 +18,6 @@ delete:
   operationId: deleteGateway
   tags:
    - gateways
-  security:
-   - basicAuth: []
   parameters:
     - $ref: "#/parameters/groupId"
   responses:
