@@ -4,5 +4,6 @@ allOf:
     properties:
       data:
         type: array
+        id: CdrFlowsArray
         items:
           $ref: "#/definitions/CdrFlow"

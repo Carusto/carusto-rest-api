@@ -5,12 +5,12 @@ put:
   description: |
     Gets `Route` objects.
   parameters:
-    - $ref: "#/parameters/routeId"
-    - $ref: "#/parameters/routeName"
-    - $ref: "#/parameters/routeStatus"
-    - $ref: "#/parameters/routePriority"
-    - $ref: "#/parameters/routeApplications"
-    - $ref: "#/parameters/routeConditions"
+    - $ref: "#/parameters/id"
+    - name: route
+      in: body
+      required: true
+      schema:
+        "$ref": "#/definitions/Route"
   responses:
     200:
       description: Successful response
@@ -23,7 +23,7 @@ delete:
   description: |
     Gets `Route` objects.
   parameters:
-    - $ref: "#/parameters/routeId"
+    - $ref: "#/parameters/id"
   responses:
     200:
       description: Successful response

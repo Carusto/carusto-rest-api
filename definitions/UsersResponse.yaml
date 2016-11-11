@@ -3,6 +3,7 @@ allOf:
   - type: object
     properties:
       data:
+        id: UsersArray
         type: array
         items:
           $ref: "#/definitions/User"

@@ -15,13 +15,14 @@ post:
    - routes
   description: |
     Gets `Route` objects.
+  consumes:
+    - application/json
   parameters:
-    - $ref: "#/parameters/routeName"
-    - $ref: "#/parameters/routeStatus"
-    - $ref: "#/parameters/routeType"
-    - $ref: "#/parameters/routePriority"
-    - $ref: "#/parameters/routeApplications"
-    - $ref: "#/parameters/routeConditions"
+    - name: route
+      in: body
+      required: true
+      schema:
+        "$ref": "#/definitions/Route"
   responses:
     200:
       description: Successful response

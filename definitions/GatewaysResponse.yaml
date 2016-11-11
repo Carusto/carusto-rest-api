@@ -4,5 +4,6 @@ allOf:
     properties:
       data:
         type: array
+        id: GatewaysArray
         items:
           $ref: "#/definitions/Gateway"

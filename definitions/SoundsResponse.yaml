@@ -4,5 +4,6 @@ allOf:
     properties:
       data:
         type: array
+        id: SoundsArray
         items:
           $ref: "#/definitions/Sound"

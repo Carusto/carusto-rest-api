@@ -4,5 +4,6 @@ allOf:
     properties:
       data:
         type: array
+        id: IntegrationDatabasesArray
         items:
           $ref: "#/definitions/IntegrationDatabase"

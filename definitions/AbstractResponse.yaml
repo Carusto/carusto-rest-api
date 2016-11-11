@@ -1,4 +1,10 @@
 type: object
+discriminator: responseType
+required:
+  - success
+  - code
+  - message
+  - responseType # required for inheritance to work
 properties:
   success:
     type: boolean

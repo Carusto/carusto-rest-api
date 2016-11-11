@@ -4,5 +4,6 @@ allOf:
     properties:
       data:
         type: array
+        id: GroupsArray
         items:
           $ref: "#/definitions/Group"

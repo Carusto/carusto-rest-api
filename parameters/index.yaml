@@ -3,6 +3,13 @@
 # Generic parameters
 ########################################
 
+id:
+  name: id
+  in: path
+  required: true
+  type: integer
+  format: int32
+
 idInPath:
   name: id
   in: path
@@ -208,73 +215,6 @@ groupDescription:
   name: description
   in: formData
   type: string
-
-
-########################################
-# Routes parameters
-########################################
-
-routeId:
-  name: id
-  in: path
-  description: Route ID
-  required: true
-  type: integer
-  format: int32
-routeName:
-  name: name
-  in: formData
-  description: User defined name
-  required: true
-  type: string
-  default: Custom name
-routeStatus:
-  name: status
-  in: formData
-  description: Status, whether this Route is enabled or not.
-  required: true
-  type: string
-  enum:
-    - ENABLED
-    - DISABLED
-routePriority:
-  name: priority
-  in: formData
-  description: A number from 0 to 99. `Routes` with higher number will be executed at first.
-  required: true
-  type: integer
-  default: 10
-routeType:
-  name: type
-  in: formData
-  description: Type for Route where it could be applied
-  required: true
-  type: string
-  enum:
-    - CALL_FROM_GATEWAY
-    - CALL_TO_GATEWAY
-    - CALL_FROM_USER
-    - CALL_TO_USER
-routeApplications:
-  name: applications
-  in: formData
-  description: Applications that should be evaluted when this Route is matches by conditions
-  required: true
-  type: array
-  collectionFormat: multi
-  items:
-    type: object
-    $ref: "#/definitions/RouteApplication"
-routeConditions:
-  name: conditions
-  in: formData
-  description: Conditions to check before evaluting applications
-  required: true
-  type: array
-  collectionFormat: multi
-  items:
-    type: object
-    $ref: "#/definitions/RouteCondition"
 
 ########################################
 # Gateways parameters
