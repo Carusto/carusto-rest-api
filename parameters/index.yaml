@@ -578,7 +578,7 @@ callDialNumber:
   type: string
 
 callDialToken:
-  name: dail_token
+  name: dial_token
   description: An device identifier to call to. Used only if "dial_method" is "call_through_device".
   in: formData
   required: false
