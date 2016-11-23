@@ -1,0 +1,9 @@
+allOf: 
+  - $ref: "#/definitions/AbstractResponse"
+  - type: object
+    properties:
+      data:
+        id: ContactsArray
+        type: array
+        items:
+          $ref: "#/definitions/Contact"

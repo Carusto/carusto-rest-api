@@ -4,6 +4,12 @@
 /routes/{id}:
   $ref: ./routesChange.yaml
 
+/queues:
+  $ref: ./queues.yaml
+
+/queues/{id}:
+  $ref: ./queuesChange.yaml
+
 /users:
   $ref: ./users.yaml
 
@@ -45,6 +51,12 @@
 
 /cdr/{id}/debug:
   $ref: ./cdrDebug.yaml
+
+/contacts:
+  $ref: ./contacts.yaml
+
+/contacts/{id}:
+  $ref: ./contactsChange.yaml
 
 /v2/async/{id}:
   $ref: ./v2_async.yaml

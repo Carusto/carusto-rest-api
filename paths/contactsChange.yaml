@@ -1,0 +1,27 @@
+put:
+  operationId: updateRoute
+  tags:
+   - contacts
+  parameters:
+    - $ref: "#/parameters/id"
+    - name: contact
+      in: body
+      required: true
+      schema:
+        "$ref": "#/definitions/Contact"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/ContactResponse'
+delete:
+  operationId: deleteContact
+  tags:
+   - contacts
+  parameters:
+    - $ref: "#/parameters/id"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/AbstractResponse'

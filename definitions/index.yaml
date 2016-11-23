@@ -27,6 +27,35 @@ RouteCondition:
   $ref: ./RouteCondition.yaml
 
 # =========================
+# Queues
+# =========================
+
+Queue:
+  $ref: ./Queue.yaml
+
+QueueResponse:
+  $ref: ./QueueResponse.yaml
+
+QueuesResponse:
+  $ref: ./QueuesResponse.yaml
+
+# =========================
+# Contacts
+# =========================
+
+Contact:
+  $ref: ./Contact.yaml
+
+ContactInfo:
+  $ref: ./ContactInfo.yaml
+
+ContactResponse:
+  $ref: ./ContactResponse.yaml
+
+ContactsResponse:
+  $ref: ./ContactsResponse.yaml
+
+# =========================
 # Accounting
 # =========================
 

@@ -1,0 +1,19 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  folderId:
+    type: integer
+    format: int32
+  ownerId:
+    type: integer
+    format: int32
+  info:
+    type: array
+    items:
+      $ref: "#/definitions/ContactInfo"
+  tags:
+    type: array
+    items:
+      type: string

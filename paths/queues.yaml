@@ -1,0 +1,30 @@
+get:
+  operationId: getQueues
+  tags:
+   - queues
+  description: |
+    Gets `Queues` objects.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: "#/definitions/QueuesResponse"
+post:
+  operationId: createQueue
+  tags:
+   - queues
+  description: |
+    Gets `Queue` objects.
+  consumes:
+    - application/json
+  parameters:
+    - name: queue
+      in: body
+      required: true
+      schema:
+        "$ref": "#/definitions/Queue"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/QueueResponse'

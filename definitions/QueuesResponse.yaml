@@ -1,0 +1,9 @@
+allOf: 
+  - $ref: "#/definitions/AbstractResponse"
+  - type: object
+    properties:
+      data:
+        id: QueuesArray
+        type: array
+        items:
+          $ref: "#/definitions/Queue"

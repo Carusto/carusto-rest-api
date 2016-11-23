@@ -1,0 +1,27 @@
+put:
+  operationId: updateQueue
+  tags:
+   - queues
+  parameters:
+    - $ref: "#/parameters/id"
+    - name: queue
+      in: body
+      required: true
+      schema:
+        "$ref": "#/definitions/Queue"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/QueueResponse'
+delete:
+  operationId: deleteQueue
+  tags:
+   - queues
+  parameters:
+    - $ref: "#/parameters/id"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/AbstractResponse'

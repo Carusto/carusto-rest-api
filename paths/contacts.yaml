@@ -1,0 +1,30 @@
+get:
+  operationId: getContacts
+  tags:
+   - contacts
+  description: |
+    Gets `Contact` objects.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: "#/definitions/ContactsResponse"
+post:
+  operationId: createContact
+  tags:
+   - contacts
+  description: |
+    Gets `Contact` objects.
+  consumes:
+    - application/json
+  parameters:
+    - name: contact
+      in: body
+      required: true
+      schema:
+        "$ref": "#/definitions/Contact"
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/ContactResponse'
